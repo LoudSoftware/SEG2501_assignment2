@@ -79,6 +79,7 @@ public class ChatClient extends AbstractClient {
         try {
             closeConnection();
         } catch (IOException e) {
+            System.out.println(e.getMessage());
         }
         System.exit(0);
     }

@@ -2,7 +2,7 @@
 // "Object Oriented Software Engineering" and is issued under the open-source
 // license found at www.lloseng.com 
 
-import java.io.*;
+import java.net.InetAddress;
 
 import ocsf.server.*;
 
@@ -16,7 +16,7 @@ import ocsf.server.*;
  * @author Paul Holden
  * @version July 2000
  */
-public class EchoServer extends AbstractServer {
+public class EchoServer extends AbstractServer implements Runnable {
     //Class variables *************************************************
 
     /**
@@ -69,13 +69,43 @@ public class EchoServer extends AbstractServer {
 
     }
 
+    // **** Changed for E49 ****
+    @Override
+    protected void clientConnected(ConnectionToClient client) {
+        System.out.println("Connected: Client " + client.getInetAddress());
+
+        Thread connectionWatchdog = new Thread(client){
+            InetAddress savedClient = client.getInetAddress();
+            @Override
+            public void run(){
+                while (true) {
+                    if (!client.isAlive()) {
+                        clientDisconnected(savedClient);
+                        break;
+                    }
+                    try {
+                        Thread.sleep(1000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        };
+        connectionWatchdog.start();
+    }
+
+    protected synchronized void clientDisconnected(InetAddress client) {
+        System.out.println("Disconnected: Client " + client);
+    }
+
+
     //Class methods ***************************************************
 
     /**
      * This method is responsible for the creation of
      * the server instance (there is no UI in this phase).
      *
-     * @param args[0] The port number to listen on.  Defaults to 5555
+     * @param args [0] The port number to listen on.  Defaults to 5555
      *                if no argument is entered.
      */
     public static void main(String[] args) {
