@@ -18,7 +18,7 @@ import ocsf.client.*;
  * @author Dr Robert Lagani&egrave;re
  * @version July 2000
  */
-public class ClientConsole implements ChatIF {
+public class ClientConsole implements ChatIF, Runnable {
     //Class variables *************************************************
 
     /**
@@ -91,7 +91,7 @@ public class ClientConsole implements ChatIF {
     /**
      * This method is responsible for the creation of the Client UI.
      *
-     * @param args[0] The host to connect to.
+     * @param args [0] The host to connect to.
      */
     public static void main(String[] args) {
         String host = "";
@@ -103,7 +103,35 @@ public class ClientConsole implements ChatIF {
             host = "localhost";
         }
         ClientConsole chat = new ClientConsole(host, DEFAULT_PORT);
+
+        // Creates a new thread and runs it.
+        Thread connectionWatchdog = new Thread(chat);
+        connectionWatchdog.start();
+
         chat.accept();  //Wait for console data
     }
+
+    /**
+     * This is the Connection watchdog Thread.
+     * It will loop and check if client is connected and quit the client if the server goes offline.
+     */
+    @Override
+    public void run() {
+        System.out.println("Connection watchdog running...");
+
+        while (true) { // Loop to check if client is connected
+            if (!client.isConnected()) {
+                System.out.println("Connection closed, stopping client...");
+                client.quit();
+            } // Closing the client when isConnected == false
+
+            try { // Sleeping the thread for one second after each loop
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
 }
+
 //End of ConsoleChat class
