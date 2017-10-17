@@ -102,7 +102,13 @@ public class ClientConsole implements ChatIF, Runnable {
         } catch (ArrayIndexOutOfBoundsException e) {
             host = "localhost";
         }
-        ClientConsole chat = new ClientConsole(host, DEFAULT_PORT);
+
+        try {
+            port = Integer.parseInt(args[1]);
+        } catch (ArrayIndexOutOfBoundsException e) {
+            port = DEFAULT_PORT;
+        }
+        ClientConsole chat = new ClientConsole(host, port);
 
         // Creates a new thread and runs it.
         Thread connectionWatchdog = new Thread(chat);
