@@ -103,6 +103,7 @@ public class ClientConsole implements ChatIF, Runnable {
             host = "localhost";
         }
 
+        // **** Changed for E49 ****
         try {
             port = Integer.parseInt(args[1]);
         } catch (ArrayIndexOutOfBoundsException e) {
@@ -110,6 +111,7 @@ public class ClientConsole implements ChatIF, Runnable {
         }
         ClientConsole chat = new ClientConsole(host, port);
 
+        // **** Changed for E49 ****
         // Creates a new thread and runs it.
         Thread connectionWatchdog = new Thread(chat);
         connectionWatchdog.start();
@@ -118,6 +120,7 @@ public class ClientConsole implements ChatIF, Runnable {
     }
 
     /**
+     * **** Changed for E49 ****
      * This is the Connection watchdog Thread.
      * It will loop and check if client is connected and quit the client if the server goes offline.
      */
