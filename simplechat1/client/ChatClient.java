@@ -76,6 +76,7 @@ public class ChatClient extends AbstractClient {
         System.exit(1);
     }
 
+
     /**
      * This method terminates the client.
      */

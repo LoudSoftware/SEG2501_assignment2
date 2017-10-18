@@ -3,78 +3,89 @@
   <ID>JAVA</ID>
   <OriginalElement>BankingSystem</OriginalElement>
   <nodes>
-    <node x="871.0" y="301.0">BankingSystem.CanadianDollars</node>
-    <node x="1108.5" y="107.0">BankingSystem.CreditUnion</node>
-    <node x="499.0" y="0.0">BankingSystem.FinancialInstrument</node>
-    <node x="364.4406512605042" y="201.0">BankingSystem.CreditCard</node>
-    <node x="241.69065126050418" y="301.0">BankingSystem.MasterCard</node>
-    <node x="354.5" y="107.0">BankingSystem.ExchangeRate</node>
-    <node x="26.5" y="107.0">BankingSystem.Bank</node>
-    <node x="802.75" y="204.0">BankingSystem.Currency</node>
-    <node x="964.75" y="204.0">BankingSystem.Check</node>
-    <node x="701.0" y="301.0">BankingSystem.USDollars</node>
-    <node x="912.5" y="107.0">BankingSystem.BankAccount</node>
-    <node x="556.5" y="107.0">BankingSystem.Loan</node>
-    <node x="425.6906512605042" y="301.0">BankingSystem.Visa</node>
-    <node x="0.0" y="204.0">BankingSystem.BankBranch</node>
-    <node x="687.5" y="107.0">BankingSystem.PaymentMethod</node>
-    <node x="157.5" y="107.0">BankingSystem.BankMachine</node>
-    <node x="629.75" y="204.0">BankingSystem.DebitCard</node>
+    <node x="433.21230158730157" y="398.0">BankingSystem.CanadianDollars</node>
+    <node x="1152.5248015873017" y="107.0">BankingSystem.CreditUnion</node>
+    <node x="543.0248015873016" y="0.0">BankingSystem.FinancialInstrument</node>
+    <node x="668.0248015873016" y="204.0">BankingSystem.CreditCard</node>
+    <node x="587.2748015873016" y="301.0">BankingSystem.MasterCard</node>
+    <node x="398.52480158730157" y="107.0">BankingSystem.ExchangeRate</node>
+    <node x="196.99999999999994" y="107.0">BankingSystem.Bank</node>
+    <node x="364.96230158730157" y="301.0">BankingSystem.Currency</node>
+    <node x="385.46230158730157" y="204.0">BankingSystem.Fiat</node>
+    <node x="1018.0248015873016" y="204.0">BankingSystem.Check</node>
+    <node x="263.21230158730157" y="398.0">BankingSystem.USDollars</node>
+    <node x="956.5248015873016" y="107.0">BankingSystem.BankAccount</node>
+    <node x="600.5248015873016" y="107.0">BankingSystem.Loan</node>
+    <node x="771.2748015873016" y="301.0">BankingSystem.Visa</node>
+    <node x="170.49999999999994" y="204.0">BankingSystem.BankBranch</node>
+    <node x="731.5248015873016" y="107.0">BankingSystem.PaymentMethod</node>
+    <node x="0.0" y="107.0">BankingSystem.BankMachine</node>
+    <node x="845.0248015873016" y="204.0">BankingSystem.DebitCard</node>
   </nodes>
   <notes />
   <edges>
+    <edge source="BankingSystem.Currency" target="BankingSystem.Fiat">
+      <point x="0.0" y="-23.5" />
+      <point x="0.0" y="23.5" />
+    </edge>
     <edge source="BankingSystem.CreditCard" target="BankingSystem.PaymentMethod">
-      <point x="-1.1368683772161603E-13" y="-23.5" />
-      <point x="438.94065126050407" y="174.0" />
-      <point x="713.125" y="174.0" />
-      <point x="-76.875" y="23.5" />
+      <point x="0.0" y="-23.5" />
+      <point x="746.5248015873016" y="184.0" />
+      <point x="808.3998015873016" y="184.0" />
+      <point x="-25.625" y="23.5" />
     </edge>
     <edge source="BankingSystem.CanadianDollars" target="BankingSystem.Currency">
       <point x="0.0" y="-23.5" />
-      <point x="971.5" y="276.0" />
-      <point x="909.25" y="276.0" />
+      <point x="533.7123015873016" y="373.0" />
+      <point x="471.46230158730157" y="373.0" />
       <point x="35.5" y="23.5" />
+    </edge>
+    <edge source="BankingSystem.Fiat" target="BankingSystem.PaymentMethod">
+      <point x="0.0" y="-23.5" />
+      <point x="435.96230158730157" y="174.0" />
+      <point x="757.1498015873016" y="174.0" />
+      <point x="-76.875" y="23.5" />
     </edge>
     <edge source="BankingSystem.Bank" target="BankingSystem.FinancialInstrument">
       <point x="0.0" y="-23.5" />
-      <point x="82.0" y="67.0" />
-      <point x="515.1428571428571" y="67.0" />
-      <point x="-96.85714285714289" y="23.5" />
+      <point x="252.49999999999994" y="77.0" />
+      <point x="591.453373015873" y="77.0" />
+      <point x="-64.57142857142856" y="23.5" />
     </edge>
     <edge source="BankingSystem.CreditUnion" target="BankingSystem.FinancialInstrument">
       <point x="0.0" y="-23.5" />
-      <point x="1192.0" y="67.0" />
-      <point x="708.8571428571428" y="67.0" />
-      <point x="96.85714285714278" y="23.5" />
+      <point x="1236.0248015873017" y="67.0" />
+      <point x="752.8819444444445" y="67.0" />
+      <point x="96.85714285714289" y="23.5" />
     </edge>
     <edge source="BankingSystem.Check" target="BankingSystem.PaymentMethod">
       <point x="0.0" y="-23.5" />
-      <point x="1024.75" y="174.0" />
-      <point x="866.875" y="174.0" />
+      <point x="1078.0248015873017" y="174.0" />
+      <point x="910.8998015873016" y="174.0" />
       <point x="76.875" y="23.5" />
     </edge>
     <edge source="BankingSystem.DebitCard" target="BankingSystem.PaymentMethod">
       <point x="0.0" y="-23.5" />
-      <point x="706.25" y="184.0" />
-      <point x="764.375" y="184.0" />
-      <point x="-25.625" y="23.5" />
+      <point x="921.5248015873016" y="184.0" />
+      <point x="859.6498015873016" y="184.0" />
+      <point x="25.625" y="23.5" />
     </edge>
     <edge source="BankingSystem.MasterCard" target="BankingSystem.CreditCard">
       <point x="0.0" y="-23.5" />
-      <point x="323.6906512605042" y="276.0" />
-      <point x="399.6906512605042" y="276.0" />
+      <point x="669.2748015873016" y="276.0" />
+      <point x="707.2748015873016" y="276.0" />
       <point x="-39.25" y="23.5" />
     </edge>
     <edge source="BankingSystem.ExchangeRate" target="BankingSystem.FinancialInstrument">
       <point x="0.0" y="-23.5" />
-      <point x="445.5" y="87.0" />
-      <point x="579.7142857142857" y="87.0" />
+      <point x="489.52480158730157" y="87.0" />
+      <point x="623.7390873015872" y="87.0" />
       <point x="-32.285714285714334" y="23.5" />
     </edge>
     <edge source="BankingSystem.USDollars" target="BankingSystem.Currency">
       <point x="0.0" y="-23.5" />
-      <point x="776.0" y="276.0" />
-      <point x="838.25" y="276.0" />
+      <point x="338.21230158730157" y="373.0" />
+      <point x="400.46230158730157" y="373.0" />
       <point x="-35.5" y="23.5" />
     </edge>
     <edge source="BankingSystem.BankBranch" target="BankingSystem.Bank">
@@ -85,39 +96,33 @@
       <point x="0.0" y="-23.5" />
       <point x="0.0" y="23.5" />
     </edge>
-    <edge source="BankingSystem.Currency" target="BankingSystem.PaymentMethod">
-      <point x="0.0" y="-23.5" />
-      <point x="873.75" y="184.0" />
-      <point x="815.625" y="184.0" />
-      <point x="25.625" y="23.5" />
-    </edge>
     <edge source="BankingSystem.Visa" target="BankingSystem.CreditCard">
       <point x="0.0" y="-23.5" />
+      <point x="823.7748015873016" y="276.0" />
+      <point x="785.7748015873016" y="276.0" />
       <point x="39.25" y="23.5" />
     </edge>
     <edge source="BankingSystem.BankMachine" target="BankingSystem.FinancialInstrument">
       <point x="0.0" y="-23.5" />
-      <point x="246.0" y="77.0" />
-      <point x="547.4285714285714" y="77.0" />
-      <point x="-64.57142857142856" y="23.5" />
+      <point x="88.5" y="67.0" />
+      <point x="559.1676587301587" y="67.0" />
+      <point x="-96.85714285714289" y="23.5" />
     </edge>
     <edge source="BankingSystem.BankAccount" target="BankingSystem.FinancialInstrument">
       <point x="0.0" y="-23.5" />
-      <point x="1000.5" y="77.0" />
-      <point x="676.5714285714286" y="77.0" />
+      <point x="1044.5248015873017" y="77.0" />
+      <point x="720.5962301587301" y="77.0" />
       <point x="64.57142857142856" y="23.5" />
     </edge>
     <edge source="BankingSystem.PaymentMethod" target="BankingSystem.FinancialInstrument">
       <point x="0.0" y="-23.5" />
-      <point x="790.0" y="87.0" />
-      <point x="644.2857142857143" y="87.0" />
-      <point x="32.285714285714334" y="23.5" />
+      <point x="834.0248015873016" y="87.0" />
+      <point x="688.3105158730158" y="87.0" />
+      <point x="32.28571428571422" y="23.5" />
     </edge>
   </edges>
-  <settings layout="Hierarchic Group" zoom="1.0" x="722.0" y="179.0" />
-  <SelectedNodes>
-    <node>BankingSystem.CreditCard</node>
-  </SelectedNodes>
+  <settings layout="Hierarchic Group" zoom="1.0" x="597.2500000000001" y="198.66666666666663" />
+  <SelectedNodes />
   <Categories />
   <SCOPE>Project Files</SCOPE>
   <VISIBILITY>packageLocal</VISIBILITY>

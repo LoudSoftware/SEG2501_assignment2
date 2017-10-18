@@ -132,6 +132,8 @@ public class ClientConsole implements ChatIF, Runnable {
             if (!client.isConnected()) {
                 System.out.println("Connection closed, stopping client...");
                 client.quit();
+                System.exit(1);
+                break;
             } // Closing the client when isConnected == false
 
             try { // Sleeping the thread for one second after each loop
