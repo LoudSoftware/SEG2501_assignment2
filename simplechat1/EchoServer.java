@@ -3,6 +3,7 @@
 // license found at www.lloseng.com 
 
 import java.net.InetAddress;
+import java.util.Random;
 
 import ocsf.server.*;
 
@@ -69,21 +70,35 @@ public class EchoServer extends AbstractServer implements Runnable {
 
     }
 
-    // **** Changed for E49 ****
+    /**
+     * **** Changed for E49 ****
+     * Will get run every time a Client connects
+     * Runs a new watchdog thread for each client that connects
+     *
+     * @param client the connection connected to the client.
+     */
     @Override
     protected void clientConnected(ConnectionToClient client) {
+        // Printing out the client InetAddress to console
         System.out.println("Connected: Client " + client.getInetAddress());
 
-        Thread connectionWatchdog = new Thread(client){
+        // Creating a new Thread to watchdog the connection to the client
+        Thread connectionWatchdog = new Thread(client, "Client" +
+                client.getInetAddress() + "_" + +new Random().nextInt(10000)) {
+            // Naming the thread for debugging purposes.
+
+            // Saving the address as if the client is dead, it will be null
             InetAddress savedClient = client.getInetAddress();
+
             @Override
-            public void run(){
+            public void run() {
+                System.out.println("Starting watchdog for" + savedClient);
                 while (true) {
-                    if (!client.isAlive()) {
-                        clientDisconnected(savedClient);
-                        break;
+                    if (!client.isAlive()) { // Tests if client Thread is still alive.
+                        clientDisconnected(savedClient); // Call function with the saved address to be able to print it.
+                        break; // Break from the loop, essentially killing the Thread
                     }
-                    try {
+                    try { // Sleep for 1 second
                         Thread.sleep(1000);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
@@ -91,13 +106,19 @@ public class EchoServer extends AbstractServer implements Runnable {
                 }
             }
         };
-        connectionWatchdog.start();
+        connectionWatchdog.start(); // Start the thread
     }
 
+    // Prints out a message on server console with client InetAddress that just disconnected.
     protected synchronized void clientDisconnected(InetAddress client) {
         System.out.println("Disconnected: Client " + client);
     }
 
+    // Overriding this function just in case we make a something that triggers it.
+    @Override
+    protected synchronized void clientDisconnected(ConnectionToClient client) {
+        System.out.println("Client disconnected");
+    }
 
     //Class methods ***************************************************
 
@@ -106,7 +127,7 @@ public class EchoServer extends AbstractServer implements Runnable {
      * the server instance (there is no UI in this phase).
      *
      * @param args [0] The port number to listen on.  Defaults to 5555
-     *                if no argument is entered.
+     *             if no argument is entered.
      */
     public static void main(String[] args) {
         int port = 0; //Port to listen on

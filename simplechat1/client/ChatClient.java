@@ -72,6 +72,10 @@ public class ChatClient extends AbstractClient {
         }
     }
 
+    public void connectionClosed() {
+        System.exit(1);
+    }
+
     /**
      * This method terminates the client.
      */
