@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>StudentRegistration</OriginalElement>
+  <nodes>
+    <node x="368.0" y="475.0">StudentRegistration.Tutorial</node>
+    <node x="293.5" y="189.0">StudentRegistration.Room</node>
+    <node x="278.0" y="97.0">StudentRegistration.Professor</node>
+    <node x="0.0" y="664.0">StudentRegistration.GraduateStudent</node>
+    <node x="364.0" y="286.0">StudentRegistration.Laboratory</node>
+    <node x="265.0" y="756.0">StudentRegistration.Building</node>
+    <node x="205.99999999999997" y="475.0">StudentRegistration.TimeSlot</node>
+    <node x="543.0" y="286.0">StudentRegistration.MeetingRoom</node>
+    <node x="0.0" y="756.0">StudentRegistration.ProgramOfStudies</node>
+    <node x="446.0" y="97.0">StudentRegistration.Technician</node>
+    <node x="187.0" y="286.0">StudentRegistration.Classroom</node>
+    <node x="620.0" y="97.0">StudentRegistration.TeachingAssistant</node>
+    <node x="36.0" y="567.0">StudentRegistration.Student</node>
+    <node x="252.0" y="567.0">StudentRegistration.RegistrationSystem</node>
+    <node x="251.49999999999997" y="378.0">StudentRegistration.CourseProperties</node>
+    <node x="0.0" y="286.0">StudentRegistration.Gymnasium</node>
+    <node x="520.0" y="475.0">StudentRegistration.Exam</node>
+    <node x="0.0" y="97.0">StudentRegistration.AdministrativeAssistant</node>
+    <node x="0.0" y="475.0">StudentRegistration.CourseSection</node>
+    <node x="362.0" y="0.0">StudentRegistration.Employee</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="StudentRegistration.Tutorial" target="StudentRegistration.CourseProperties">
+      <point x="0.0" y="-23.5" />
+      <point x="434.0" y="455.0" />
+      <point x="381.5" y="455.0" />
+      <point x="26.0" y="23.5" />
+    </edge>
+    <edge source="StudentRegistration.Classroom" target="StudentRegistration.Room">
+      <point x="0.0" y="-23.5" />
+      <point x="265.5" y="266.0" />
+      <point x="339.25" y="266.0" />
+      <point x="-15.25" y="23.5" />
+    </edge>
+    <edge source="StudentRegistration.Professor" target="StudentRegistration.Employee">
+      <point x="0.0" y="-23.5" />
+      <point x="352.0" y="77.0" />
+      <point x="418.625" y="77.0" />
+      <point x="-18.875" y="23.5" />
+    </edge>
+    <edge source="StudentRegistration.GraduateStudent" target="StudentRegistration.Student">
+      <point x="0.0" y="-23.5" />
+      <point x="0.0" y="23.5" />
+    </edge>
+    <edge source="StudentRegistration.Gymnasium" target="StudentRegistration.Room">
+      <point x="0.0" y="-23.5" />
+      <point x="83.5" y="256.0" />
+      <point x="308.75" y="256.0" />
+      <point x="-45.75" y="23.5" />
+    </edge>
+    <edge source="StudentRegistration.TimeSlot" target="StudentRegistration.CourseProperties">
+      <point x="0.0" y="-23.5" />
+      <point x="277.0" y="455.0" />
+      <point x="329.5" y="455.0" />
+      <point x="-26.0" y="23.5" />
+    </edge>
+    <edge source="StudentRegistration.AdministrativeAssistant" target="StudentRegistration.Employee">
+      <point x="0.0" y="-23.5" />
+      <point x="129.0" y="67.0" />
+      <point x="380.875" y="67.0" />
+      <point x="-56.625" y="23.5" />
+    </edge>
+    <edge source="StudentRegistration.CourseSection" target="StudentRegistration.CourseProperties">
+      <point x="0.0" y="-23.5" />
+      <point x="93.0" y="445.0" />
+      <point x="277.5" y="445.0" />
+      <point x="-78.0" y="23.5" />
+    </edge>
+    <edge source="StudentRegistration.Technician" target="StudentRegistration.Employee">
+      <point x="0.0" y="-23.5" />
+      <point x="523.0" y="77.0" />
+      <point x="456.375" y="77.0" />
+      <point x="18.875" y="23.5" />
+    </edge>
+    <edge source="StudentRegistration.TeachingAssistant" target="StudentRegistration.Employee">
+      <point x="0.0" y="-23.5" />
+      <point x="727.0" y="67.0" />
+      <point x="494.125" y="67.0" />
+      <point x="56.625" y="23.5" />
+    </edge>
+    <edge source="StudentRegistration.MeetingRoom" target="StudentRegistration.Room">
+      <point x="0.0" y="-23.5" />
+      <point x="636.5" y="256.0" />
+      <point x="400.25" y="256.0" />
+      <point x="45.75" y="23.5" />
+    </edge>
+    <edge source="StudentRegistration.Exam" target="StudentRegistration.CourseProperties">
+      <point x="0.0" y="-23.5" />
+      <point x="577.5" y="445.0" />
+      <point x="433.5" y="445.0" />
+      <point x="78.0" y="23.5" />
+    </edge>
+    <edge source="StudentRegistration.Laboratory" target="StudentRegistration.Room">
+      <point x="0.0" y="-23.5" />
+      <point x="443.5" y="266.0" />
+      <point x="369.75" y="266.0" />
+      <point x="15.25" y="23.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="417.0" y="401.5" />
+  <SelectedNodes>
+    <node>StudentRegistration.CourseSection</node>
+  </SelectedNodes>
+  <Categories />
+  <SCOPE>Project Files</SCOPE>
+  <VISIBILITY>packageLocal</VISIBILITY>
+</Diagram>
+

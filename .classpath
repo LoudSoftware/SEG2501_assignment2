@@ -4,6 +4,9 @@
 	<classpathentry kind="src" path="ocsf/client"/>
 	<classpathentry kind="src" path="ocsf/server"/>
 	<classpathentry kind="src" path="simplechat1"/>
+	<classpathentry kind="src" path="StudentRegistration"/>
+	<classpathentry kind="src" path="xx"/>
+	<classpathentry kind="src" path="UML"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
