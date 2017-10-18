@@ -84,7 +84,7 @@ public class EchoServer extends AbstractServer implements Runnable {
 
         // Creating a new Thread to watchdog the connection to the client
         Thread connectionWatchdog = new Thread(client, "Client" +
-                client.getInetAddress() + "_" + +new Random().nextInt(10000)) {
+                client.getInetAddress() + "_" + new Random().nextInt(10000)) {
             // Naming the thread for debugging purposes.
 
             // Saving the address as if the client is dead, it will be null
