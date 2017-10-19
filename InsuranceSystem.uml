@@ -3,38 +3,69 @@
   <ID>JAVA</ID>
   <OriginalElement>InsuranceSystem</OriginalElement>
   <nodes>
-    <node x="27.5" y="189.0">InsuranceSystem.Insurable</node>
-    <node x="447.0" y="97.0">InsuranceSystem.HomePolicy</node>
-    <node x="0.0" y="97.0">InsuranceSystem.AutomobilePolicy</node>
-    <node x="251.5" y="0.0">InsuranceSystem.PolicyType</node>
-    <node x="0.0" y="378.0">InsuranceSystem.Insurance</node>
-    <node x="0.0" y="286.0">InsuranceSystem.InsuredProperty</node>
-    <node x="233.0" y="97.0">InsuranceSystem.InsurancePolicy</node>
+    <node x="203.0" y="567.0">InsuranceSystem.Claim</node>
+    <node x="0.0" y="97.0">InsuranceSystem.HomePolicy</node>
+    <node x="402.0" y="97.0">InsuranceSystem.AutomobilePolicy</node>
+    <node x="27.5" y="378.0">InsuranceSystem.Insurable</node>
+    <node x="0.0" y="286.0">InsuranceSystem.InsuranceClient</node>
+    <node x="134.75" y="189.0">InsuranceSystem.Client</node>
+    <node x="337.25" y="0.0">InsuranceSystem.Policy</node>
+    <node x="212.0" y="286.0">InsuranceSystem.Beneficiary</node>
+    <node x="635.0" y="97.0">InsuranceSystem.PolicyRenewal</node>
+    <node x="245.0" y="475.0">InsuranceSystem.LifeInsurance</node>
+    <node x="0.0" y="567.0">InsuranceSystem.Deductible</node>
+    <node x="487.83333333333337" y="344.66666666666663">InsuranceSystem.Insurance</node>
+    <node x="188.0" y="97.0">InsuranceSystem.InsurancePolicy</node>
+    <node x="0.0" y="475.0">InsuranceSystem.InsuredProperty</node>
   </nodes>
   <notes />
   <edges>
-    <edge source="InsuranceSystem.HomePolicy" target="InsuranceSystem.PolicyType">
+    <edge source="InsuranceSystem.Beneficiary" target="InsuranceSystem.Client">
       <point x="0.0" y="-23.5" />
-      <point x="531.0" y="72.0" />
-      <point x="382.33333333333337" y="72.0" />
-      <point x="52.33333333333337" y="23.5" />
+      <point x="290.5" y="261.0" />
+      <point x="222.5" y="261.0" />
+      <point x="29.25" y="23.5" />
     </edge>
-    <edge source="InsuranceSystem.AutomobilePolicy" target="InsuranceSystem.PolicyType">
+    <edge source="InsuranceSystem.InsuranceClient" target="InsuranceSystem.Client">
       <point x="0.0" y="-23.5" />
-      <point x="106.5" y="72.0" />
-      <point x="277.6666666666667" y="72.0" />
-      <point x="-52.333333333333314" y="23.5" />
+      <point x="96.0" y="261.0" />
+      <point x="164.0" y="261.0" />
+      <point x="-29.25" y="23.5" />
     </edge>
-    <edge source="InsuranceSystem.InsurancePolicy" target="InsuranceSystem.PolicyType">
+    <edge source="InsuranceSystem.HomePolicy" target="InsuranceSystem.Policy">
       <point x="0.0" y="-23.5" />
-      <point x="0.0" y="23.5" />
+      <point x="84.0" y="67.0" />
+      <point x="352.125" y="67.0" />
+      <point x="-44.625" y="23.5" />
     </edge>
     <edge source="InsuranceSystem.InsuredProperty" target="InsuranceSystem.Insurable">
       <point x="0.0" y="-23.5" />
       <point x="0.0" y="23.5" />
     </edge>
+    <edge source="InsuranceSystem.AutomobilePolicy" target="InsuranceSystem.Policy">
+      <point x="0.0" y="-23.5" />
+      <point x="508.5" y="77.0" />
+      <point x="411.625" y="77.0" />
+      <point x="14.875" y="23.5" />
+    </edge>
+    <edge source="InsuranceSystem.InsurancePolicy" target="InsuranceSystem.Policy">
+      <point x="0.0" y="-23.5" />
+      <point x="285.0" y="77.0" />
+      <point x="381.875" y="77.0" />
+      <point x="-14.875" y="23.5" />
+    </edge>
+    <edge source="InsuranceSystem.PolicyRenewal" target="InsuranceSystem.Policy">
+      <point x="0.0" y="-23.5" />
+      <point x="727.0" y="67.0" />
+      <point x="441.375" y="67.0" />
+      <point x="44.625" y="23.5" />
+    </edge>
+    <edge source="InsuranceSystem.LifeInsurance" target="InsuranceSystem.Insurance">
+      <point x="0.0" y="-23.5" />
+      <point x="0.0" y="23.5" />
+    </edge>
   </edges>
-  <settings layout="Hierarchic Group" zoom="1.0" x="889.5" y="534.0" />
+  <settings layout="Hierarchic Group" zoom="1.5" x="441.50000000000006" y="305.0000000000001" />
   <SelectedNodes>
     <node>InsuranceSystem.Insurance</node>
   </SelectedNodes>
